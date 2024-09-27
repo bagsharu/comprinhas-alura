@@ -12,7 +12,7 @@ public class Principal {
         int comando = 1;
         while (comando != 0) {
             System.out.println("Insira o produto que deseja comprar ");
-            String produto = leitura.nextLine();
+            String produto = leitura.next();
 
             System.out.println("Agora, digite o valor da compra:");
             double valorCompra = leitura.nextDouble();
