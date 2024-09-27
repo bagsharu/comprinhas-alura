@@ -40,5 +40,8 @@ public class CartaoCredito {
         return true;
     }
 
+    public String toString() {
+        return "Saldo Atual: " + this.saldoCartao;
+    }
 
 }

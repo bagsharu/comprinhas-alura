@@ -15,4 +15,8 @@ public class Compras {
     public double getValorDoProduto() {
         return valorDoProduto;
     }
+
+    public String toString() {
+        return "Produto: " + this.descricaoProd + " de valor: R$ " + this.valorDoProduto;
+    }
 }
