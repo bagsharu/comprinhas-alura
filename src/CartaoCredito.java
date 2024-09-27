@@ -30,4 +30,15 @@ public class CartaoCredito {
         return carrinho;
     }
 
+    public boolean adicionarCarrinho (Compras compra) {
+
+        if (this.saldoCartao < compra.getValorDoProduto()) {
+            return false;
+        }
+        this.saldoCartao -= compra.getValorDoProduto();
+        this.carrinho.add(compra);
+        return true;
+    }
+
+
 }
