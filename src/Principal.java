@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Principal {
@@ -29,6 +30,20 @@ public class Principal {
                 comando = 0;
             }
         }
+
+        System.out.println("\n-------------------------------------------------------");
+        System.out.println("COMPRAS REALIZADAS:");
+
+        // Ordenação dos produtos:
+        Collections.sort(cartao.getCarrinho());
+
+        // For-each que percorre a List de produtos no carrinho
+        for (Compras c: cartao.getCarrinho()) {
+            System.out.println(c.getDescricaoProd() + " - " + c.getValorDoProduto());
+        }
+        System.out.println("\n-------------------------------------------------------");
+
+        System.out.println("\nSaldo restante: " + cartao.getSaldoCartao());
 
     }
 }
