@@ -18,6 +18,16 @@ public class Principal {
 
             // Instância do produto Compras
             Compras comprinha = new Compras(produto,valorCompra);
+
+            // Validação da compra
+            boolean statusCompra = cartao.adicionarCarrinho(comprinha);
+            if (statusCompra) {
+                System.out.println("Compra Realizada! \n Insira 1 para continuar, 0 para finalizar o processo.");
+                comando = leitura.nextInt();
+            } else {
+                System.out.println("Saldos insuficientes :(");
+                comando = 0;
+            }
         }
 
     }
